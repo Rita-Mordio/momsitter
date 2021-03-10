@@ -24,7 +24,9 @@ const getUsersByAPI = (searchText) => {
 
 const getUsersBySession = (searchText) => {};
 
-const renderUsers = (users) => {};
+const renderUsers = (users) => {
+  console.log(users)
+};
 
 const searchUsers = async () => {
   let users;
@@ -33,8 +35,6 @@ const searchUsers = async () => {
 
   if (activeButton === "apiButton") users = await getUsersByAPI(searchText);
   else users = getUsersBySession(searchText);
-
-  console.log(users)
 
   renderUsers(users);
 };
